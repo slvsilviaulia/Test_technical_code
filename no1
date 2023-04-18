@@ -2,16 +2,41 @@
 <form method='action'>
 <input type='number' name='input1' id='input1' />
 </br>
-<button name onclick='segitiga()'>Generate Segitiga</button>
-<button name='buttonganjil' onclick='bilanganGanjil()'>Generate Bilangan Ganjil</button>
-<button name='buttonprima' onclick='bilanganPrima()'>Generate Bilangan Prima</button>
+<input type='submit' name='segitiga' value='Generate Segitiga'/>
+<input type='submit' name='ganjil' value='Generate Bilangan Ganjil'/>
+<input type='submit' name='prima'value='Generate Bilangan Prima'/>
 </form>
 
+<b>RESULT</b>
 <p id='segitiga'></p>
 <p id='bilanganGanjil'></p>
 <p id='bilanganPrima'></p>
 </html>
 
+
+<script>
+$function(){
+var data, pesan;
+data = $('#input1').val();
+
+  $("#input1 input[type=submit]").click(functiion(){
+  switch ($(this).val()){
+   case "segitiga":
+  
+         break;
+   case "ganjil":
+  
+         break;      
+   case "segitiga":
+  
+         prima;      
+         
+  }
+  
+  
+  })
+}
+</script>
 
 <script>
 

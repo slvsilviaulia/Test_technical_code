@@ -1,0 +1,77 @@
+<html>
+<form method='action'>
+<input type='number' name='input1' id='input1' />
+</br>
+<button name onclick='segitiga()'>Generate Segitiga</button>
+<button name='buttonganjil' onclick='bilanganGanjil()'>Generate Bilangan Ganjil</button>
+<button name='buttonprima' onclick='bilanganPrima()'>Generate Bilangan Prima</button>
+</form>
+
+<p id='segitiga'></p>
+<p id='bilanganGanjil'></p>
+<p id='bilanganPrima'></p>
+</html>
+
+
+<script>
+
+function segitiga(){
+var data, pesan;
+
+data = document.getElementById(input1).value;
+
+if(data === ""){
+  alert('data kosong');
+}else if(isNan(data)){
+  alert('data harus berupa angka');
+}else{
+  pesan = "";
+  for (i = 1;i<data.length;i ++){
+  pesan += data[i];
+    for(j = 0;j<i;j++){
+    pesan += '0';
+    }
+  }
+  document.getElementById("bilanganGanjil").innerHTML = pesan;
+}
+
+function bilanganGanjil(){
+var data, pesan;
+
+data = document.getElementById(input1).value;
+
+if(data === ""){
+  alert('data kosong');
+}else if(isNan(data)){
+  alert('data harus berupa angka');
+}else{
+  pesan = "";
+  for (i = 1;i<data;i += 2){
+  pesan += i+ "";
+  }
+  document.getElementById("bilanganGanjil").innerHTML = pesan;
+}
+
+function bilanganPrima(){
+var data, pesan;
+
+data = document.getElementById(input1).value;
+
+if(data === ""){
+  alert('data kosong');
+}else if(isNan(data)){
+  alert('data harus berupa angka');
+}else if(data < 2){
+  alert('data harus lebih besar dari 2');
+}else{
+  pesan = "";
+  for (i = 2;i<data;i ++){
+   if(data%i == 0){
+    pesan += i+ "";
+    }
+  }
+  document.getElementById("bilanganPrima").innerHTML = pesan;
+}
+
+}
+</script>
